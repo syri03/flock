@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">modify your event</h5>
+
+      <!-- Multi Columns Form -->
+      <form class="row g-3">
+        <div class="alert alert-danger" role="alert" *ngIf="msgerreur!=''">
+          {{msgerreur}}
+        </div>
+        <div class="alert alert-success" role="alert" *ngIf="msgsuccess!=''">
+          {{msgsuccess}}
+      </div>
+        <div class="col-md-12">
+          <label for="inputName5" class="form-label">Event name</label>
+          <input  [(ngModel)] = "evname" name="evname" type="text" class="form-control" id="inputName5">
+        </div>
+        <div class="col-md-4">
+          <label for="inputEmail5" class="form-label">Starts</label>
+          <input [(ngModel)] = "dates" name="dates" type="text" class="form-control" id="inputEmail5">
+        </div>
+        <div class="col-md-4">
+          <label for="inputEmail5" class="form-label">Ends</label>
+          <input [(ngModel)] = "daten"  name="daten" type="text" class="form-control" id="inputEmail5">
+        </div>
+        <div class="col-md-4">
+          <label for="inputPassword5" class="form-label">Location</label>
+          <input [(ngModel)] = "location" name="location" type="text" class="form-control" id="inputPassword5">
+        </div>
+        <div class="col-md-12">
+          <label for="inputName5" class="form-label">type</label>
+          <input [(ngModel)] = "type" name="type" type="text" class="form-control" id="inputName5">
+        </div>
+        <div class="col-md-12">
+          <label for="inputName5" class="form-label">note</label>
+          <input [(ngModel)] = "note" name="note" type="text" class="form-control" id="inputName5">
+        </div>
+        <div class="col-md-12">
+          <label for="inputName5" class="form-label">By</label>
+          <input [(ngModel)] = "creator" name="creator" type="text" class="form-control" id="inputName5">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress5" class="form-label">Descrption</label>
+          <input [(ngModel)] = "about" name="about" class="form-control" id="about" style="height: 100px" placeholder="our event consists of...">
+        </div>
+    
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary" (click)="Modifierevent()">Save changes</button>
+        </div>
+      </form><!-- End Multi Columns Form -->
+
+    </div>
+  </div>

@@ -1,0 +1,75 @@
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Home</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item">Discover events</li>
+
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        
+
+        <div class="row align-items-center " *ngFor="let event of eventdata">
+            <div class="col-lg-9">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="" class="img-fluid rounded-start" >
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h2 class="card-title-2">{{ event.titre_event }}</h2>
+                                    <div class="d-flex ">
+                                        <button mat-button id="open-popup-btn" class="btn btn-custom-purple" (click)="openDialog(event.titre_event,event.type_event,event.note,event.location,event.creator,event.start,event.end,event.description)"><i class="bi bi-eye"></i></button>
+                                        <button class="btn btn-custom-purple" (click)="openDialog1(event.titre_event)" style="margin-left: 5px;"><i class="bi bi-pencil"></i></button>
+                                        <button class="btn btn-custom-purple" (click)="deleteevent(event.titre_event)" style="margin-left: 5px;"><i class="bi bi-trash"></i></button>
+                                    </div>
+                                </div>
+                                <p class="card-text-2">{{ event.description }}</p>
+                            </div>
+                            <div class="card-body">                               
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <h3 class="card-title-2">Starts at</h3>
+                                                <p class="card-text">{{event.start}}</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h3 class="card-title-2">Ends at</h3>
+                                                <p class="card-text">{{event.end}}</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h3 class="card-title-2">LOCATION</h3>
+                                                <p class="card-text">{{ event.location }}</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h3 class="card-title-2">Creator</h3>
+                                                <a href="#" class="card-text">{{event.type_event }}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+        
+    </section>
+
+</main>
+
+
+

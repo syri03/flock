@@ -1,0 +1,47 @@
+
+<div class="card" style="width:500px;height:800px;">
+    <!-- Card header -->
+    <div class="card-header">
+      <!-- Image -->
+      <img  src="assets/img/DJ.jpg" alt="Image" class="mat-card-image img-fluid rounded">
+      <!-- Title -->
+      <div class="card-title text-center ">{{tab1.titre}}</div>
+    </div>
+
+    <!-- Card content -->
+    <div class="mat-card-content" style="text-align: center;" >
+      <!-- Attributes -->
+      <br><p><strong>START TIME:</strong>{{tab1.start}}</p>
+      <br><p><strong>END TIME:</strong> {{tab1.end}}</p>
+      <br><p><strong>LOCATION:</strong> {{tab1.location}}</p>
+      <br><p><strong>TYPE:</strong>{{tab1.type}}</p>
+      <br><p><strong>NOTES:</strong> {{tab1.note}}</p>
+      <br><p><strong>ATTENDEES:</strong></p>
+      <ul>
+        <li></li>
+        
+      </ul>
+    </div>
+  
+    <!-- Card actions (footer) -->
+    <div class="card-footer d-flex justify-content-center">
+      <button class="btn btn-custom-orange me-2" type="button" (click)="attendevent">Attend event</button>
+      <div class="dropdown-right" >
+        <button type="button" class="btn btn-custom-orange dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+          Recommand event
+        </button>
+        <form class="dropdown-menu p-4">
+          <div class="mb-3">
+            <label for="exampleDropdownFormEmail2" class="form-label">To:</label>
+            <input type="email" class="form-control" id="to" placeholder="@yassine-mabaouj" >
+          </div>
+          <div class="mb-3">
+            <label for="recommandation" class="form-label"> recommandation</label>
+            <textarea  class="form-control" id="recommandation" placeholder="write a message"></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+      </div>
+  </div>
+</div>

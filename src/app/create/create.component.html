@@ -1,0 +1,87 @@
+
+
+<body>
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Events</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">create events</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+      <div class="container">
+        <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-2 d-flex flex-column align-items-center justify-content-center">
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Create your own event!</h5>
+
+      <!-- Multi Columns Form -->
+      <form class="row g-3">
+        <div class="alert alert-danger" role="alert" *ngIf="msgerreur!=''">
+          {{msgerreur}}
+        </div>
+        <div class="alert alert-success" role="alert" *ngIf="msgsuccess!=''">
+          {{msgsuccess}}
+      </div>
+        
+
+      <div class="col-md-12">
+        <label for="inputName5" class="form-label">event image</label>
+        <input [(ngModel)] = "image" name="image" type="file" class="form-control" id="inputName5">
+      </div>
+        <div class="col-md-12">
+          <label for="inputName5" class="form-label">Event name</label>
+          <input [(ngModel)] = "evname" name="evname" type="text" class="form-control" id="inputName5">
+        </div>
+        <div class="col-md-4">
+          <label for="inputEmail5" class="form-label">Starts</label>
+          <input [(ngModel)] = "dates" name="dates" type="datetime-local" class="form-control" id="inputEmail5">
+        </div>
+        <div class="col-md-4">
+          <label for="inputEmail5" class="form-label">Ends</label>
+          <input [(ngModel)] = "daten" name="daten" type="datetime-local" class="form-control" id="inputEmail5">
+        </div>
+        <div class="col-md-4">
+          <label for="inputPassword5" class="form-label">Location</label>
+          <input [(ngModel)] = "location" name="location" type="text" class="form-control" id="inputPassword5">
+        </div>
+        <div class="col-md-12">
+          <label for="inputName5" class="form-label">type</label>
+          <input [(ngModel)] = "type" name="type" type="text" class="form-control" id="inputName5">
+        </div>
+        <div class="col-md-12">
+          <label for="inputName5" class="form-label">note</label>
+          <input [(ngModel)] = "note" name="note" type="text" class="form-control" id="inputName5">
+        </div>
+        <div class="col-md-12">
+          <label for="inputName5" class="form-label">By</label>
+          <input [(ngModel)] = "creator" name="creator" type="text" class="form-control" id="inputName5">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress5" class="form-label">Descrption</label>
+          <input [(ngModel)] = "about" name="about" class="form-control" id="about" style="height: 100px" placeholder="our event consists of...">
+        </div>
+    
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary" (click)="addevent()">Create</button>
+        </div>
+      </form><!-- End Multi Columns Form -->
+
+    </div>
+  </div>
+      </div>
+                </div>
+            </div>
+      </section>
+      
+      </div>
+      
+    </main>
+</body>
